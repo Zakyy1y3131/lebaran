@@ -15,8 +15,16 @@ function f1() {
 
 function f() {
     let btn = document.getElementById("noBtn");
-    btn.style.position = "relative";
-    let x = Math.random() * 200 - 100; // Acak antara -100 dan 100
-    let y = Math.random() * 100 - 50;  // Acak antara -50 dan 50
-    btn.style.transform = `translate(${x}px, ${y}px)`;
+    btn.style.position = "absolute";
+    
+    // Mendapatkan ukuran layar
+    let maxX = window.innerWidth - btn.offsetWidth;
+    let maxY = window.innerHeight - btn.offsetHeight;
+
+    // Posisi acak dalam batas layar
+    let x = Math.random() * maxX;
+    let y = Math.random() * maxY;
+
+    btn.style.left = `${x}px`;
+    btn.style.top = `${y}px`;
 }
