@@ -16,17 +16,7 @@ function f1() {
 function f() {
     let btn = document.getElementById("noBtn");
     btn.style.position = "relative";
-    if (flag == 1) {
-        btn.style.left = "50px";
-        btn.style.top = "20px";
-        flag = 2;
-    } else if (flag == 2) {
-        btn.style.left = "-50px";
-        btn.style.top = "-20px";
-        flag = 3;
-    } else if (flag == 3) {
-        btn.style.left = "0px";
-        btn.style.top = "0px";
-        flag = 1;
-    }
+    let x = Math.random() * 200 - 100; // Acak antara -100 dan 100
+    let y = Math.random() * 100 - 50;  // Acak antara -50 dan 50
+    btn.style.transform = `translate(${x}px, ${y}px)`;
 }
