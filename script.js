@@ -15,16 +15,18 @@ function f1() {
 
 function f() {
     let btn = document.getElementById("noBtn");
-    btn.style.position = "absolute";
-    
-    // Mendapatkan ukuran layar
-    let maxX = window.innerWidth - btn.offsetWidth;
-    let maxY = window.innerHeight - btn.offsetHeight;
-
-    // Posisi acak dalam batas layar
-    let x = Math.random() * maxX;
-    let y = Math.random() * maxY;
-
-    btn.style.left = `${x}px`;
-    btn.style.top = `${y}px`;
+    btn.style.position = "relative";
+    if (flag == 1) {
+        btn.style.left = "50px";
+        btn.style.top = "20px";
+        flag = 2;
+    } else if (flag == 2) {
+        btn.style.left = "-50px";
+        btn.style.top = "-20px";
+        flag = 3;
+    } else if (flag == 3) {
+        btn.style.left = "0px";
+        btn.style.top = "0px";
+        flag = 1;
+    }
 }
