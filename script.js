@@ -8,7 +8,7 @@ function f1() {
         confirmButtonColor: "#008cff"
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = "https://wa.me/6285150621367?text=Mohon%20Maaf%20Lahir%20Batin%20Bro%20!!!!!";
+            window.location = "https://wa.me/6285150621367?text=Mohon%20Maaf%20Lahir%20Batin%20Bro%20Zaky%20!!!!!";
         }
     });
 }
